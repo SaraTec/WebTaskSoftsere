@@ -1,0 +1,19 @@
+body {
+    background: #000 url(https://www.liverpoolfc.com/bundles/applicationsonatafrontend/images/lfc-desktop-bg.jpg) no-repeat top center fixed;
+    margin: 0;
+}
+
+
+html {
+    font-family: sans-serif;
+}
+
+body>.wrapper {
+    clear: both;
+    margin: 0 auto;
+    max-width: 1300px;
+    overflow-x: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 20px #5d5d5d;
+}
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/main_menu.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
+    <link rel="stylesheet" href="./styles/fans.css">
+    <link rel="stylesheet" href="./styles/admin.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu">
+        <nav class="mein_menu ">
+            <ul id="hamburger">
+                <input type="checkbox"
+                    onchange="this.checked ? mobile_munu.style.display = 'block' : mobile_munu.style.display = 'none'" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </ul>
+            <ul id="mobile_munu" class="links">
+                <li><a href="./">Main</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" onClick="show_dropdown(this)" class="dropbtn">Matches</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="#">Fans</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./admin.html">Admin</a></li>
+                <span class="line"></span>
+            </ul>
+            <ul class="menu_logo">
+                <li>
+                    <img id="logo" src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-469/lfc/images/logo.png" alt="logo">
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <div class="comments_wrapper">
+            <h1>Apeal of fans</h1>
+            <div class="list_comments">
+                <!--<div class="comment">
+                <div class="comment-text">
+                    <p>Fabinho has revealed he is feeling 'good' as he continues to take encouraging strides with his
+                        rehabilitation from an ankle ligament injury.
+
+                        The Brazilian has been sidelined since late November after falling awkwardly during a challenge
+                        in the Champions League encounter with Napoli at Anfield.
+
+                        But Jürgen Klopp is optimistic the No.3, Joel Matip and Dejan Lovren will be involved in the
+                        squad's preparations for the upcoming Premier League encounter with Manchester United.
+
+                        Speaking to Telefoot, Fabinho said: "My ankle is getting better, I trained by myself this week.
+                        I was working with the ball again. I feel good and confident."</p>
+                </div>
+                <div class="comment-discription">
+                    <div class="comment-data">
+                        <p>20.08.1999, 20:33</p>
+                    </div>
+                    <div class="comment-sender-name">
+                        <p>tarik1999</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="comment-text">
+                    <p>Fabinho has revealed he is feeling 'good' as he continues to take encouraging strides with his
+                        rehabilitation from an ankle ligament injury.
+
+                        The Brazilian has been sidelined since late November after falling awkwardly during a challenge
+                        in the Champions League encounter with Napoli at Anfield.
+
+                        But Jürgen Klopp is optimistic the No.3, Joel Matip and Dejan Lovren will be involved in the
+                        squad's preparations for the upcoming Premier League encounter with Manchester United.
+
+                        Speaking to Telefoot, Fabinho said: "My ankle is getting better, I trained by myself this week.
+                        I was working with the ball again. I feel good and confident."</p>
+                </div>
+                <div class="comment-discription">
+                    <div class="comment-data">
+                        <p>20.08.1999, 20:33</p>
+                    </div>
+                    <div class="comment-sender-name">
+                        <p>tarik1999</p>
+                    </div>
+                </div>
+            </div>
+            -->
+            </div>
+        </div>
+        <div class="form_wrapper">
+            <form onsubmit="return false" id='formRespons' style="width: 100%;">
+                <input required type="text" pattern="\D\w{0,8}\s?\w{0,8}" id="userName"
+                    placeholder="Write your name...">
+                <textarea required id="responce_description" pattern=".{0,100}" placeholder="Write an appeal..."
+                    style="height:200px"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+        <footer>
+            <img src="https://www.liverpoolfc.com/bundles/applicationsonatafrontend/images/footer-crest.png" alt="logo">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#" class="dropbtn">Matches</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Fans</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="./js/scrips.js"></script>
+    <script src="./api/index.js"></script>
+    <script src="./js/comments.js"></script>
+</body>
+
+</html>

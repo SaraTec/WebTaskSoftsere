@@ -1,0 +1,18 @@
+header {
+  background-image: url("https://i.pinimg.com/originals/94/c2/28/94c2287d86978da93522dc5b9196f98f.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    height: 50vh;
+  }
+}

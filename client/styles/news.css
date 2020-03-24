@@ -1,0 +1,96 @@
+.posts {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 20px;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    justify-content: space-evenly;
+
+}
+
+@media screen and (max-width: 900px){
+    .posts a{
+        box-shadow: 0 0 20px #5d5d5d;
+    } 
+}
+.posts a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.posts a:hover {
+    box-shadow: 0 0 20px #5d5d5d;
+}
+
+.posts a:hover button {
+    animation: shake 0.32s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+
+    10%,90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.img_container {
+    /*width: 100%;*/
+    height: 220px;
+    background-size: cover;
+}
+
+.post_content h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-family: fcb-extrabold;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 21px;
+}
+
+.post_content {
+    height: 190px;
+}
+
+.post_content p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    margin-top: 15px;
+    color: #727272;
+    -webkit-line-clamp: 2;
+}
+
+.posts button {
+    height: 50px;
+    padding: 15px;
+    background-color: #e31b23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

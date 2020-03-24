@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/main_menu.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
+    <link rel="stylesheet" href="./styles/admin.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="menu">
+        <nav class="mein_menu ">
+            <ul id="hamburger">
+                <input type="checkbox"
+                    onchange="this.checked ? mobile_munu.style.display = 'block' : mobile_munu.style.display = 'none'" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </ul>
+            <ul id="mobile_munu" class="links">
+                <li><a href="./">Main</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" onClick="show_dropdown(this)" class="dropbtn">Matches</a>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./funs.html">Fans</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Admin</a></li>
+                <span class="line"></span>
+            </ul>
+            <ul class="menu_logo">
+                <li>
+                    <img id="logo" src="https://d3j2s6hdd6a7rg.cloudfront.net/v2/JE-469/lfc/images/logo.png" alt="logo">
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <section>
+            <div class="container">
+                <form id="formAdmin" onsubmit="return false;">
+                    <div class="image-upload">
+                        <label for="photo">
+                            <img height="200" id="imgPlaceHolder" src="https://icon-library.net/images/upload-photo-icon/upload-photo-icon-21.jpg" />
+                        </label>
+
+                        <input required name="photo" id="photo" type="file" accept="image/*" />
+                    </div>
+                    <label for="title">Title</label>
+                    <input required type="text" pattern="[A-Z]+.{3,15}" id="title" name="title"
+                        placeholder="Add title...">
+                    <label for="postContent">Description</label>
+                    <textarea required id="postContent" name="postContent" placeholder="Add more info..."
+                        style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+        <footer>
+            <img src="https://www.liverpoolfc.com/bundles/applicationsonatafrontend/images/footer-crest.png" alt="logo">
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#" class="dropbtn">Matches</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Fans</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+    <script src="./js/database.js"></script>
+    <script src="./api/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/scrips.js"></script>
+</body>
+
+</html>

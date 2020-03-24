@@ -1,0 +1,168 @@
+.mein_menu {
+  display: flex;
+  flex-direction: row;
+  background-color: #e31b23;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: auto;
+  box-shadow: 0 0 20px #5d5d5da1;
+}
+@keyframes go-left-right {
+  /* объявляем имя анимации: "go-left-right" */
+  from {
+    left: 0px;
+  } /* от: left: 0px */
+  to {
+    left: calc(100% - 50px);
+  } /* до: left: 100%-50px */
+}
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.mein_menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.mein_menu li {
+  text-align: center;
+}
+.mein_menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 24px 26px;
+  text-decoration: none;
+  font-size: 25px;
+  width: 100px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 900px) {
+  .mein_menu,
+  .mein_menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .mein_menu li {
+  border-top: 1px solid yellow ;
+  }
+  .menu_logo {
+    order: -1;
+  }
+  ul.links {
+    display: none;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .mein_menu li a {
+    width: 100%;
+    padding: 24px 0;
+  }
+  .dropdown-content {
+    position: relative!important;
+  }
+}
+
+.mein_menu li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #b8161f;
+}
+
+.mein_menu .dropdown-content a:hover {
+  background-color: #961017;
+}
+
+#logo {
+  height: 70px;
+  margin-right: 20px;
+  animation-name: rotation; /* Имя анимации. Немного ниже мы создадим анимацию с этим именем. Не сделайте их разными, иначе не заработает. */
+  animation-duration: 1s; /* Задаем продолжительность одного цикла анимации. */
+  animation-iteration-count: 1; /* Задаем количество повторений цикла, в нашем случае — бесконечность. */
+  animation-timing-function: linear; /* Ну и указываем плавный тип анимации. */
+  margin: 0 auto;
+}
+
+@keyframes rotation {
+  /* Создаем ключевые кадры для анимации с именем «rotation». */
+  0% {
+    transform: rotate(0deg);
+  } /* Старт цикла, картинка повернута на 0 градусов о.О */
+  100% {
+    transform: rotate(360deg);
+  } /* Конец цикла, картинка повернута на 360 градусов, т.е. ее полный оборот. */
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #b8161f;
+  display: none;
+}
+
+.dropdown-content a {
+  border-top: 1px solid #e31b23;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.links li:hover ~ .line {
+  opacity: 1;
+}
+/*****  ANIMATION   *******/
+.line {
+  background: yellow;
+  height: 2px;
+  border-radius: 50px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  bottom: 0;
+  /* left: var(--left, calc(912px / var(--items) * (var(--index) - 1))); */
+  left: calc(152px * var(--index) + 40px - 83px);
+  width: 152px;
+  --index: 0;
+}
+.links > a:hover ~ .line {
+  opacity: 1;
+}
+.links li:nth-of-type(1):hover ~ .line {
+  --index: 1;
+}
+.links li:nth-of-type(2):hover ~ .line {
+  --index: 2;
+}
+.links li:nth-of-type(3):hover ~ .line {
+  --index: 3;
+}
+.links li:nth-of-type(4):hover ~ .line {
+  --index: 4;
+}
+.links li:nth-of-type(5):hover ~ .line {
+  --index: 5;
+}
+.links li:nth-of-type(6):hover ~ .line {
+  --index: 6;
+}
+.links li:nth-of-type(7):hover ~ .line {
+  --index: 7;
+}
+.links li:nth-of-type(8):hover ~ .line {
+  --index: 8;
+}
+.links li:nth-of-type(9):hover ~ .line {
+  --index: 9;
+}
+.links li:nth-of-type(10):hover ~ .line {
+  --index: 10;
+}
